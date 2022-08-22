@@ -1,40 +1,44 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="@string/appearance">
+        <SwitchPreference
+            app:key="automatic"
+            app:title="@string/automatic_mode" />
+        <SwitchPreference
+            app:key="light"
+            app:title="@string/light_mode"
+            app:dependency=""/>
+        <SwitchPreference
+            app:key="dark"
+            app:title="@string/dark_mode" />
+    </PreferenceCategory>
 
-        <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
-
-        <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
-            app:useSimpleSummaryProvider="true" />
-
+    <PreferenceCategory app:title="@string/support">
+        <Preference
+            app:key="suggestion"
+            app:title="@string/contact" />
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/provide_feedback">
-
         <Preference
             app:key="suggestion"
             app:title="@string/provide_suggestions" />
         <Preference
             app:key="rate"
             app:title="@string/rate_findine" />
+    </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/storage">
+        <Preference
+            app:key="cache"
+            app:title="@string/cache"/>
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/about">
-
         <Preference
-            app:key="version"
+            app:key="Current version"
             app:summary="@string/version_number"
             app:title="@string/version"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

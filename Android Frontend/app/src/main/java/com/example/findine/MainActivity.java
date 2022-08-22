@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new FindFragment());
                     break;
                 case R.id.browse:
-                    System.out.println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
                     replaceFragment(new BrowseFragment());
                     break;
                 case R.id.settings:

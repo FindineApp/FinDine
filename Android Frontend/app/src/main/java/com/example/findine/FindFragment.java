@@ -1,5 +1,6 @@
 package com.example.findine;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,6 +41,7 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
     private String mParam2;
 
     private MapView mapView;
+    private ImageButton filterButton;
 
     public FindFragment() {
         // Required empty public constructor
@@ -79,12 +83,20 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find, container, false);
 
+        filterButton = (ImageButton) view.findViewById(R.id.filter_button);
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent filterIntent = new Intent(getActivity(),FilterActivityFind.class);
+                startActivity(filterIntent);
+            }
+        });
+
         // Get the SupportMapFragment and register for the callback
         // when the map is ready for use.
         mapView = (MapView) view.findViewById(R.id.map_main);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
-
         return view;
     }
 
