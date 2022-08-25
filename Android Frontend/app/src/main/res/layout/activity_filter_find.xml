@@ -44,47 +44,46 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
+            android:id="@+id/place_type_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="15dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dining Type"
+                android:text="Place Type"
+                android:textSize="18sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"/>
-            <RadioGroup
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"/>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginBottom="10dp">
-                <RadioButton
-                    android:layout_width="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp">
+                <ToggleButton
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Dine in"
-                    android:drawableTop="@drawable/ic_baseline_brunch_dining_24"
-                    android:layout_weight="1"
-                    android:gravity="center"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
+                    android:textOff="Restaurant"
+                    android:textOn="Restaurant"
+                    android:drawableTop="@drawable/ic_baseline_restaurant_48"
+                    android:gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:maxLines="1"
+                    android:layout_weight="1"/>
+                <ToggleButton
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Take out"
-                    android:drawableTop="@drawable/ic_baseline_takeout_dining_24"
-                    android:layout_weight="1"
-                    android:gravity="center"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delivery"
-                    android:drawableTop="@drawable/ic_baseline_delivery_dining_24"
-                    android:layout_weight="1"
-                    android:gravity="center"/>
-            </RadioGroup>
+                    android:text="Cafe"
+                    android:drawableTop="@drawable/ic_baseline_local_cafe_24"
+                    android:gravity="center"
+                    android:layout_marginEnd="35dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -147,7 +146,7 @@
                 <ToggleButton
                     android:id="@+id/toggleButtonRate1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
                     android:textOff="1 +"
                     android:textOn="1 +"
@@ -271,52 +270,6 @@
             android:layout_width="match_parent"
             android:layout_marginTop="7dp"
             android:background="@color/light_grey" />
-
-        <LinearLayout
-            android:id="@+id/place_type_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="15dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Place Type"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="10dp"/>
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginHorizontal="10dp">
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Restaurant"
-                    android:drawableTop="@drawable/ic_baseline_restaurant_48"
-                    android:gravity="center"
-                    android:layout_marginStart="35dp"
-                    android:maxLines="1"
-                    android:layout_weight="1"/>
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.4"/>
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cafe"
-                    android:drawableTop="@drawable/ic_baseline_local_cafe_24"
-                    android:gravity="center"
-                    android:layout_marginEnd="35dp"
-                    android:layout_weight="1"/>
-            </RadioGroup>
-        </LinearLayout>
 
         <View
             android:layout_height="2dp"
