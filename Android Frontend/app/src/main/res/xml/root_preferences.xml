@@ -3,11 +3,11 @@
     <PreferenceCategory app:title="@string/appearance">
         <SwitchPreference
             app:key="automatic"
-            app:title="@string/automatic_mode" />
+            app:title="@string/automatic_mode"
+            app:summary="Changes theme each day at\n8 a.m. and 8 p.m."/>
         <SwitchPreference
             app:key="light"
-            app:title="@string/light_mode"
-            app:dependency=""/>
+            app:title="@string/light_mode" />
         <SwitchPreference
             app:key="dark"
             app:title="@string/dark_mode" />
@@ -34,9 +34,18 @@
             app:title="@string/cache"/>
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/legal">
+        <Preference
+            app:key="service"
+            app:title="@string/legal_1"/>
+        <Preference
+            app:key="privacy"
+            app:title="@string/legal_2"/>
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="@string/about">
         <Preference
-            app:key="Current version"
+            app:key="version"
             app:summary="@string/version_number"
             app:title="@string/version"/>
     </PreferenceCategory>

@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_tune_24_white"
-        android:backgroundTint="@color/theme_color_gradient_left"
+        android:backgroundTint="@color/theme_color"
         android:padding="10dp"
         android:layout_gravity="end"
         android:layout_marginTop="25dp"
