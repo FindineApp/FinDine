@@ -13,13 +13,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 /**
  * create an instance of this fragment.
@@ -42,7 +53,7 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find, container, false);
 
-        findButton = (TextView) view.findViewById(R.id.random);
+        findButton = (TextView) view.findViewById(R.id.generate_button);
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +78,32 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
         mapView.getMapAsync(this);
 
         return view;
+    }
+
+    private void findRestaurant() {
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+        HashMap<String, String> params = new HashMap<String, String>();
+        queue.start();
+        params.put("_id", "id");
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "google_sign_up", new JSONObject(params),
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        if(response.toString().equals("{}")){
+                            Toast.makeText(getContext(), "Unable to get update from server", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d(TAG, "onErrorResponse updateUI " + "Error: " + error.getMessage());
+                    }
+                });
+        queue.add(request);
     }
 
     /**

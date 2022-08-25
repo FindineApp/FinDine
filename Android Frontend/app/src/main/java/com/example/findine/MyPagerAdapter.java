@@ -5,19 +5,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import java.net.URI;
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class MyPagerAdapter extends PagerAdapter {
 
-    List<Uri> list;
+    List<String> list;
 
-    MyPagerAdapter(List<Uri> imageList) {
+    MyPagerAdapter(List<String> imageList) {
         this.list = imageList;
     }
 
@@ -36,9 +36,9 @@ public class MyPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.image_layout, container, false);
         ImageView imageView = view.findViewById(R.id.imageView);
-        imageView.setImageURI(list.get(position));
+        Glide.with(container.getContext()).load(list.get(position)).centerCrop().into(imageView);
         container.addView(view);
-        return super.instantiateItem(container, position);
+        return view;
     }
 
     @Override
