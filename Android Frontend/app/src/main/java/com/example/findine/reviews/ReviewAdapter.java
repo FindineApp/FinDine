@@ -34,11 +34,11 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         return new ReviewAdapter.ViewHolder(view);
     }
 
-    @Override
     /*
         Show data onto recyclerview
         Called after OnCreateViewHolder to bind the views
      */
+    @Override
     public void onBindViewHolder(@NonNull ReviewAdapter.ViewHolder holder, int position) {
         ReviewItem reviewItem = reviewItems.get(position);
         holder.userNameView.setText(reviewItem.getUserName());

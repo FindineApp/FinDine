@@ -52,9 +52,7 @@
                 android:gravity="center_vertical"
                 android:text="9:00 AM – 5:00 PM"
                 android:textColor="@color/black"/>
-
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
