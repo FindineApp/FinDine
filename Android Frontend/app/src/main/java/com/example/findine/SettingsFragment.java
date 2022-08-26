@@ -51,7 +51,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         cache = new CacheActions();
         Preference cacheButton = findPreference("cache");
         assert cacheButton != null;
-        cacheButton.setSummary(String.valueOf(cache.getDirSize(getContext().getCacheDir())));
+        cacheButton.setSummary(cache.convertSize((int) cache.getDirSize(getContext().getCacheDir())));
         cacheButton.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(@NonNull Preference preference) {

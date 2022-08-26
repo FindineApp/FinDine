@@ -7,22 +7,28 @@
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/background.xml" value="0.149" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/cancel_button_background.xml" value="0.1625" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/clear_button_background.xml" value="0.164" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/dining_button_background.xml" value="0.208" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/dining_button_on.xml" value="0.208" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/directions_button_background.xml" value="0.1" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/filter_element_background.xml" value="0.1665" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/ic_baseline_delivery_dining_24.xml" value="0.1525" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/ic_baseline_dinner_dining_24.xml" value="0.1525" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/ic_baseline_local_cafe_24.xml" value="0.208" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/ic_baseline_restaurant_24.xml" value="0.208" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/ic_baseline_takeout_dining_24.xml" value="0.1525" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/main_button.xml" value="0.1665" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/more_details_button_background.xml" value="0.13" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/toggle_button.xml" value="0.164" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/toggle_button_off.xml" value="0.149" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/drawable/toggle_button_on.xml" value="0.149" />
-        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/activity_filter_find.xml" value="0.4" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout-v26/activity_filter_find.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/activity_filter_find.xml" value="0.264" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/activity_restaurant_details.xml" value="0.264" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/fragment_browse.xml" value="0.264" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/fragment_find.xml" value="0.264" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/image_layout.xml" value="0.1" />
+        <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/place_adapter_layout.xml" value="0.2734375" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/layout/review_adapter_layout.xml" value="0.264" />
         <entry key="..\:/Users/lufei/Desktop/Findine/FinDine/Android Frontend/app/src/main/res/xml/root_preferences.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/lufei/Desktop/Findine/app/src/main/res/drawable/background.xml" value="0.1" />

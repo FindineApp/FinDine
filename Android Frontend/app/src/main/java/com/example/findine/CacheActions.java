@@ -42,4 +42,17 @@ public class CacheActions {
         }
         return size;
     }
+
+    public String convertSize(int size) {
+        String convertedSize = size + " B";
+        if (size >= 1000) {
+            size = size / 1000;
+            convertedSize = size + " KB";
+            if (size >= 1000000) {
+                size = size / 1000000;
+                convertedSize = size + " MB";
+            }
+        }
+        return convertedSize;
+    }
 }

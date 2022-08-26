@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="Filter"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="19sp"
             android:textStyle="bold"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,13 +48,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginHorizontal="15dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Place Type"
-                android:textSize="18sp"
+                android:text="Dining Type"
+                android:textSize="17sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_marginVertical="10dp"
@@ -63,26 +63,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="15dp"
                 android:layout_marginHorizontal="10dp">
                 <ToggleButton
+                    android:id="@+id/toggleButtonRestaurant"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:textOff="Restaurant"
-                    android:textOn="Restaurant"
-                    android:drawableTop="@drawable/ic_baseline_restaurant_48"
+                    android:layout_height="40dp"
+                    android:textOff="@string/restaurant"
+                    android:textOn="@string/restaurant"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/ic_baseline_restaurant_24"
                     android:gravity="center"
-                    android:layout_marginStart="35dp"
-                    android:maxLines="1"
-                    android:layout_weight="1"/>
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dining_button"/>
                 <ToggleButton
+                    android:id="@+id/toggleButtonCafe"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cafe"
-                    android:drawableTop="@drawable/ic_baseline_local_cafe_24"
+                    android:layout_height="40dp"
+                    android:textOn="Cafe"
+                    android:textOff="Cafe"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/ic_baseline_local_cafe_24"
                     android:gravity="center"
-                    android:layout_marginEnd="35dp"
-                    android:layout_weight="1"/>
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dining_button"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -102,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Distance"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginHorizontal="10dp"
@@ -111,8 +121,20 @@
                 android:id="@+id/seekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginHorizontal="10dp" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:max="30000"
+                android:progress="1000"/>
+            <TextView
+                android:id="@+id/distanceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 km"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="end"/>
+
         </LinearLayout>
 
         <View
@@ -131,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rating"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginHorizontal="10dp"
@@ -140,54 +162,196 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginBottom="5dp">
-                <ToggleButton
-                    android:id="@+id/toggleButtonRate1"
-                    android:layout_width="0dp"
-                    android:layout_height="35dp"
-                    android:layout_weight="1"
-                    android:textOff="1 +"
-                    android:textOn="1 +"
-                    android:background="@drawable/toggle_button"
-                    android:paddingHorizontal="15dp"
-                    android:layout_marginRight="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
-                <ToggleButton
-                    android:id="@+id/toggleButtonRate2"
+                android:orientation="horizontal">
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textOff="2 +"
-                    android:textOn="2 +"
-                    android:background="@drawable/toggle_button"
-                    android:paddingHorizontal="15dp"
-                    android:layout_marginHorizontal="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
-                <ToggleButton
-                    android:id="@+id/toggleButtonRate3"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="0.9">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="&amp; up"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="&amp; up"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="&amp; up"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_baseline_star_outline_24"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="&amp; up"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <RadioGroup
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textOff="3 +"
-                    android:textOn="3 +"
-                    android:background="@drawable/toggle_button"
-                    android:paddingHorizontal="15dp"
-                    android:layout_marginHorizontal="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
-                <ToggleButton
-                    android:id="@+id/toggleButtonRate4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textOff="4 +"
-                    android:textOn="4 +"
-                    android:background="@drawable/toggle_button"
-                    android:paddingHorizontal="15dp"
-                    android:layout_marginLeft="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
+                    android:orientation="vertical"
+                    android:layout_weight="0.1">
+                    <RadioButton
+                        android:id="@+id/radioButtonRate4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleY="0.9"
+                        android:scaleX="0.9"/>
+                    <RadioButton
+                        android:id="@+id/radioButtonRate3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleY="0.9"
+                        android:scaleX="0.9"/>
+                    <RadioButton
+                        android:id="@+id/radioButtonRate2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleY="0.9"
+                        android:scaleX="0.9"/>
+                    <RadioButton
+                        android:id="@+id/radioButtonRate1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleY="0.9"
+                        android:scaleX="0.9"/>
+                </RadioGroup>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <View
@@ -206,70 +370,59 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Price"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="10dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="15dp">
                 <ToggleButton
                     android:id="@+id/toggleButtonPrice1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:textOff="1"
-                    android:textOn="1"
+                    android:textOff="$"
+                    android:textOn="$"
                     android:background="@drawable/toggle_button"
                     android:paddingHorizontal="20dp"
-                    android:layout_marginRight="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_attach_money_24"/>
+                    android:layout_marginRight="10dp" />
                 <ToggleButton
                     android:id="@+id/toggleButtonPrice2"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:textOff="1"
-                    android:textOn="1"
+                    android:textOff="$$"
+                    android:textOn="$$"
                     android:background="@drawable/toggle_button"
                     android:paddingHorizontal="20dp"
-                    android:layout_marginRight="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
+                    android:layout_marginRight="10dp" />
                 <ToggleButton
                     android:id="@+id/toggleButtonPrice3"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:textOff="1 +"
-                    android:textOn="1 +"
+                    android:textOff="$$$"
+                    android:textOn="$$$"
                     android:background="@drawable/toggle_button"
                     android:paddingHorizontal="15dp"
-                    android:layout_marginRight="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
+                    android:layout_marginRight="10dp" />
                 <ToggleButton
                     android:id="@+id/toggleButtonPrice4"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:textOff="1 +"
-                    android:textOn="1 +"
+                    android:textOff="$$$$"
+                    android:textOn="$$$$"
                     android:background="@drawable/toggle_button"
-                    android:paddingHorizontal="15dp"
-                    android:layout_marginRight="5dp"
-                    android:drawableLeft="@drawable/ic_baseline_star_24"/>
+                    android:paddingHorizontal="15dp" />
             </LinearLayout>
         </LinearLayout>
-
-        <View
-            android:layout_height="2dp"
-            android:layout_width="match_parent"
-            android:layout_marginTop="7dp"
-            android:background="@color/light_grey" />
 
         <View
             android:layout_height="2dp"
@@ -281,7 +434,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="15dp">
             <TextView
                 android:layout_width="0dp"
@@ -289,7 +442,7 @@
                 android:text="Clear All"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:padding="15dp"
                 android:layout_marginHorizontal="5dp"
                 android:gravity="center"
@@ -301,7 +454,7 @@
                 android:text="Apply Filters"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:padding="15dp"
                 android:layout_marginHorizontal="5dp"
                 android:gravity="center"

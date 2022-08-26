@@ -28,4 +28,6 @@
     <string name="legal">Legal</string>
     <string name="legal_1">Terms of Service</string>
     <string name="legal_2">Privacy Policy</string>
+
+    <string name="restaurant">Restaurant</string>
 </resources>
