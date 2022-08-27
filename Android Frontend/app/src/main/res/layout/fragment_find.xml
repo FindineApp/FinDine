@@ -9,7 +9,6 @@
         android:id="@+id/map_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
     <ImageButton
         android:id="@+id/filter_button"
         android:layout_width="wrap_content"
@@ -21,8 +20,8 @@
         android:layout_marginTop="25dp"
         android:layout_marginRight="25dp"
         android:scaleX="1.5"
-        android:scaleY="1.5"/>
-
+        android:scaleY="1.5"
+        android:elevation="10dp"/>
     <TextView
         android:id="@+id/generate_button"
         android:layout_width="150dp"

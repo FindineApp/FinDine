@@ -4,19 +4,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BrowseFragment">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
         <SearchView
+            android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="10dp" />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/toggle_button_off"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageButton
+                android:id="@+id/browseFilter"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_tune_24_black"
+                android:background="@drawable/toggle_button_off"
+                android:layout_gravity="center"
+                android:layout_marginEnd="7dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/browseSort"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/toggle_button_off"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:gravity="center"
+                android:text="Sort By"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/browseRecyclerView"
             android:layout_width="match_parent"

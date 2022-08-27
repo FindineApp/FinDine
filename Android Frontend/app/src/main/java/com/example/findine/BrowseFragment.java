@@ -1,5 +1,6 @@
 package com.example.findine;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.SearchView;
 
 import com.example.findine.places.PlaceAdapter;
 import com.example.findine.places.PlaceItem;
-import com.example.findine.reviews.ReviewAdapter;
-import com.example.findine.reviews.ReviewItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +24,13 @@ import java.util.List;
  */
 public class BrowseFragment extends Fragment {
 
+    private SearchView searchView;
+    private ImageButton filterButton;
+
     private RecyclerView recyclerView;
     private PlaceAdapter adapter;
     private List<PlaceItem> placeItems;
+    private List<PlaceItem> searchItems;
 
     private String placeTitle;
     private String placeDistance;
@@ -57,7 +62,7 @@ public class BrowseFragment extends Fragment {
         placeDistance = "700 m";
         placeType = "Chinese";
         placeRate = 4.7;
-        placeIcon = "https://media-cdn.tripadvisor.com/media/photo-p/16/7b/79/da/logo.jpg";
+        placeIcon = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRsDXmFYgDjEkuuNna6E2jepRwba7ChOeFeq6tn76Jg&s";
         placePhoto = "https://media-cdn.tripadvisor.com/media/photo-s/16/a5/b9/e9/photo1jpg.jpg";
 
         for (int i = 0; i < 10; i++) {
@@ -65,6 +70,24 @@ public class BrowseFragment extends Fragment {
             placeItems.add(placeItem);
             adapter.notifyDataSetChanged();
         }
+
+        filterButton = view.findViewById(R.id.browseFilter);
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent filterIntent = new Intent(getActivity(), FilterActivityFind.class);
+                startActivity(filterIntent);
+            }
+        });
+
+        searchView = view.findViewById(R.id.searchBar);
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+            }
+        });
+
 
         return view;
     }
