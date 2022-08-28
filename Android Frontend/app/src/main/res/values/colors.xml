@@ -11,7 +11,9 @@
     <color name="light_grey">#F2F2F2</color>
     <color name="green">#85BB65</color>
     <color name="theme_color">#F65F45</color>
-    <color name="theme_color_initial">#F66C45</color>
+    <color name="theme_color_transparent">#66F65F45</color>
+    <color name="theme_color_circle">#455FF6</color>
+    <color name="theme_color_transparent_circle">#66F65F45</color>
     <color name="theme_color_gradient_left">#FF7853</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
