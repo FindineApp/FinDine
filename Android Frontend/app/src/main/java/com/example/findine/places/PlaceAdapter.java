@@ -43,7 +43,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         holder.placeDistanceView.setText(placeItem.getPlaceDistance());
         holder.placeTypeView.setText(placeItem.getPlaceType());
         holder.placeRatingView.setText(String.valueOf(placeItem.getPlaceRate()));
-        Glide.with(context).load(placeItem.getPlaceIcon()).centerCrop().into(holder.placeIconView);
         Glide.with(context).load(placeItem.getPlacePhoto()).centerCrop().into(holder.placePhotoView);
     }
 
@@ -58,7 +57,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         public TextView placeDistanceView;
         public TextView placeRatingView;
         public TextView placeTypeView;
-        public ImageView placeIconView;
         public ImageView placePhotoView;
 
         public ViewHolder(@NonNull View itemView) {
@@ -67,7 +65,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
             placeDistanceView = itemView.findViewById(R.id.placeDistance);
             placeRatingView = itemView.findViewById(R.id.placeRating);
             placeTypeView = itemView.findViewById(R.id.placeType);
-            placeIconView = itemView.findViewById(R.id.placeIcon);
             placePhotoView = itemView.findViewById(R.id.placePhoto);
         }
     }

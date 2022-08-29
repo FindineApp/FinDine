@@ -3,11 +3,11 @@
     <style name="Theme.Findine" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/theme_color</item>
-        <item name="colorPrimaryVariant">@color/theme_color_gradient_left</item>
+        <item name="colorPrimaryVariant">@color/theme_color</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/theme_color</item>
-        <item name="colorSecondaryVariant">@color/theme_color_gradient_left</item>
+        <item name="colorSecondaryVariant">@color/theme_color</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

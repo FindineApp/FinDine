@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new BrowseFragment());
                     break;
                 case R.id.search:
-                    
+                    replaceFragment(new SearchFragment());
+                    break;
                 case R.id.settings:
                     replaceFragment(new SettingsFragment());
                     break;

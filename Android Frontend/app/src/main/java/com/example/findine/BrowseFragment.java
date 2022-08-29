@@ -80,15 +80,6 @@ public class BrowseFragment extends Fragment {
             }
         });
 
-        searchView = view.findViewById(R.id.searchBar);
-        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-
-            }
-        });
-
-
         return view;
     }
 }
