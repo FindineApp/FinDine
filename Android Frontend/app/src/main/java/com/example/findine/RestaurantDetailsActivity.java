@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
@@ -167,10 +168,26 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements OnMa
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
-            boolean success = googleMap.setMapStyle(
-                    MapStyleOptions.loadRawResourceStyle(
-                            getApplicationContext(), R.raw.style_json_alt));
 
+            // Saving state of our app
+            // using SharedPreferences
+            SharedPreferences sharedPreferences
+                    = getSharedPreferences(
+                    "sharedPrefs", MODE_PRIVATE);
+            final boolean isDarkModeOn
+                    = sharedPreferences
+                    .getBoolean(
+                            "isDarkModeOn", false);
+            // When user reopens the app
+            // after applying dark/light mode
+            boolean success = false;
+            if (isDarkModeOn) {
+                success = googleMap.setMapStyle(
+                        MapStyleOptions.loadRawResourceStyle(
+                                this, R.raw.style_json_night));
+            } else {
+                Log.e(TAG, "Map day mode");
+            }
             if (!success) {
                 Log.e(TAG, "Style parsing failed.");
             }

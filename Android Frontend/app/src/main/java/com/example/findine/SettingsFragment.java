@@ -27,7 +27,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final SharedPreferences.Editor editor
                 = sharedPreferences.edit();
 
-        SwitchPreference app_theme = findPreference("app_theme_sw");
+        SwitchPreference app_theme = findPreference("dark");
         if(app_theme != null){
             app_theme.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override

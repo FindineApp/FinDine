@@ -6,9 +6,6 @@
             app:title="@string/automatic_mode"
             app:summary="Changes theme each day at\n8 a.m. and 8 p.m."/>
         <SwitchPreference
-            app:key="light"
-            app:title="@string/light_mode" />
-        <SwitchPreference
             app:key="dark"
             app:title="@string/dark_mode" />
     </PreferenceCategory>

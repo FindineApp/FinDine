@@ -7,9 +7,9 @@
 
     <!-- Appearance Preferences -->
     <string name="appearance">Appearance</string>
-    <string name="automatic_mode">Automatic</string>
+    <string name="automatic_mode">Automatic Mode</string>
     <string name="light_mode">Light</string>
-    <string name="dark_mode">Dark</string>
+    <string name="dark_mode">Dark Mode</string>
 
     <string name="about">About</string>
     <string name="version">Version</string>

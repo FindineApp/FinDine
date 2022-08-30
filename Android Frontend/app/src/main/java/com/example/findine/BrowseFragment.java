@@ -58,18 +58,19 @@ public class BrowseFragment extends Fragment {
         adapter = new PlaceAdapter(getContext(), placeItems);
         recyclerView.setAdapter(adapter);
 
-        placeTitle = "HaiDiLao Richmond";
+        placeTitle = "HaiDiLao HotPot Richmond";
         placeDistance = "700 m";
         placeType = "Chinese";
-        placeRate = 4.7;
-        placeIcon = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRsDXmFYgDjEkuuNna6E2jepRwba7ChOeFeq6tn76Jg&s";
+        placeRate = 4.5;
         placePhoto = "https://media-cdn.tripadvisor.com/media/photo-s/16/a5/b9/e9/photo1jpg.jpg";
 
-        for (int i = 0; i < 10; i++) {
-            PlaceItem placeItem = new PlaceItem(placeTitle, placeDistance, placeType, placeRate, placeIcon, placePhoto);
-            placeItems.add(placeItem);
-            adapter.notifyDataSetChanged();
-        }
+        PlaceItem placeItem = new PlaceItem(placeTitle, placeDistance, placeType, placeRate, placePhoto);
+        PlaceItem placeItem1 = new PlaceItem("Yunshang Rice Noodle", "1.2 km", "Chinese", 3.8, placePhoto);
+        placeItems.add(placeItem);
+        placeItems.add(placeItem1);
+        placeItems.add(new PlaceItem("Tim Hortons", "2.4 km", "Fastfood", 3.8, placePhoto));
+        placeItems.add(new PlaceItem("Edo Japan - CF Richmond Centre - Grill and Sushi", "500 m", "Japanese", 3.6, placePhoto));
+        adapter.notifyDataSetChanged();
 
         filterButton = view.findViewById(R.id.browseFilter);
         filterButton.setOnClickListener(new View.OnClickListener() {

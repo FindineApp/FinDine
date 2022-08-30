@@ -5,15 +5,13 @@ public class PlaceItem {
     private String placeDistance;
     private String placeType;
     private double placeRate;
-    private String placeIcon;
     private String placePhoto;
 
-    public PlaceItem(String placeTitle, String placeDistance, String placeType, double placeRate, String placeIcon, String placePhoto) {
+    public PlaceItem(String placeTitle, String placeDistance, String placeType, double placeRate, String placePhoto) {
         this.placeTitle = placeTitle;
         this.placeDistance = placeDistance;
         this.placeType = placeType;
         this.placeRate = placeRate;
-        this.placeIcon = placeIcon;
         this.placePhoto = placePhoto;
     }
 
@@ -31,10 +29,6 @@ public class PlaceItem {
 
     public double getPlaceRate() {
         return placeRate;
-    }
-
-    public String getPlaceIcon() {
-        return placeIcon;
     }
 
     public String getPlacePhoto() {
