@@ -44,13 +44,13 @@ public class CacheActions {
     }
 
     public String convertSize(int size) {
-        String convertedSize = size + " B";
+        String convertedSize = size + "";
         if (size >= 1000) {
             size = size / 1000;
-            convertedSize = size + " KB";
+            convertedSize = size + " K";
             if (size >= 1000000) {
                 size = size / 1000000;
-                convertedSize = size + " MB";
+                convertedSize = size + " M";
             }
         }
         return convertedSize;

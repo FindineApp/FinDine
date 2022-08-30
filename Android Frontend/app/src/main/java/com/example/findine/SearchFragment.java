@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
-import com.example.findine.places.PlaceAdapter;
 import com.example.findine.search.SearchAdapter;
 import com.example.findine.search.SearchItem;
 
