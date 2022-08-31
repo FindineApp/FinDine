@@ -29,7 +29,7 @@
             android:name=".RestaurantDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".FilterActivityFind"
+            android:name=".FilterActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.

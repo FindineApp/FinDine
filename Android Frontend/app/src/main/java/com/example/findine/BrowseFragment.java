@@ -76,7 +76,7 @@ public class BrowseFragment extends Fragment {
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent filterIntent = new Intent(getActivity(), FilterActivityFind.class);
+                Intent filterIntent = new Intent(getActivity(), FilterActivity.class);
                 startActivity(filterIntent);
             }
         });

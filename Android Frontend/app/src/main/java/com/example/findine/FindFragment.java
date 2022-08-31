@@ -69,7 +69,7 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent filterIntent = new Intent(getActivity(),FilterActivityFind.class);
+                Intent filterIntent = new Intent(getActivity(), FilterActivity.class);
                 startActivity(filterIntent);
             }
         });
@@ -115,6 +115,7 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        /*
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
@@ -136,7 +137,9 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
                         MapStyleOptions.loadRawResourceStyle(
                                 getContext(), R.raw.style_json_night));
             } else {
-                Log.e(TAG, "Map day mode");
+                success = googleMap.setMapStyle(
+                        MapStyleOptions.loadRawResourceStyle(
+                                getContext(), R.raw.style_json_alt));
             }
             if (!success) {
                 Log.e(TAG, "Style parsing failed.");
@@ -144,6 +147,8 @@ public class FindFragment extends Fragment implements OnMapReadyCallback {
         } catch (Resources.NotFoundException e) {
             Log.e(TAG, "Can't find style. Error: ", e);
         }
+
+         */
         LatLng marker = new LatLng(49.2276, -123.0076);
         float zoomLevel = 15.0f; //This goes up to 21
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, zoomLevel));

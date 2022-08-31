@@ -81,7 +81,7 @@ public class OnBoardAdapter extends PagerAdapter {
         switch (position)
         {
             case 0:
-                logo.setImageResource(R.drawable.onboard_welcome_logo);
+                //logo.setImageResource(R.drawable.onboard_welcome_logo);
                 ind1.setImageResource(R.drawable.selected);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);
@@ -103,7 +103,7 @@ public class OnBoardAdapter extends PagerAdapter {
                 next.setVisibility(View.VISIBLE);
                 break;
             case 1:
-                logo.setImageResource(R.drawable.onboard_search_logo);
+                //logo.setImageResource(R.drawable.onboard_search_logo);
                 ind1.setImageResource(R.drawable.unselected);
                 ind2.setImageResource(R.drawable.selected);
                 ind3.setImageResource(R.drawable.unselected);
@@ -125,7 +125,7 @@ public class OnBoardAdapter extends PagerAdapter {
                 next.setVisibility(View.VISIBLE);
                 break;
             case 2:
-                logo.setImageResource(R.drawable.onboard_review_logo);
+                //logo.setImageResource(R.drawable.onboard_review_logo);
                 ind1.setImageResource(R.drawable.unselected);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.selected);
@@ -147,7 +147,7 @@ public class OnBoardAdapter extends PagerAdapter {
                 next.setVisibility(View.VISIBLE);
                 break;
             case 3:
-                logo.setImageResource(R.drawable.onboard_post_logo);
+                //logo.setImageResource(R.drawable.onboard_post_logo);
                 ind1.setImageResource(R.drawable.unselected);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);
@@ -169,7 +169,7 @@ public class OnBoardAdapter extends PagerAdapter {
                 next.setVisibility(View.VISIBLE);
                 break;
             case 4:
-                logo.setImageResource(R.drawable.onboard_chatbot_logo);
+                //logo.setImageResource(R.drawable.onboard_chatbot_logo);
                 ind1.setImageResource(R.drawable.unselected);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);

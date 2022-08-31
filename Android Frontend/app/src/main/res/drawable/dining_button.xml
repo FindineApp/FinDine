@@ -1,4 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="false" android:drawable="@drawable/dining_button_off"  />
-    <item android:state_checked="true" android:drawable="@drawable/dining_button_on"  />
+    <item android:state_checked="false">
+        <shape>
+            <solid android:color="@color/light_grey"/>
+            <corners android:radius="30dp" />
+            <padding
+                android:left="15dp"
+                android:right="15dp" />
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/black" />
+            <corners android:radius="30dp" />
+            <padding
+                android:left="15dp"
+                android:right="15dp" />
+        </shape>
+    </item>
 </selector>

@@ -1,10 +1,12 @@
 package com.example.findine.places;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.findine.R;
+import com.example.findine.RestaurantDetailsActivity;
 
 import java.util.List;
 
@@ -43,8 +46,14 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         holder.placeDistanceView.setText(placeItem.getPlaceDistance());
         holder.placeTypeView.setText(placeItem.getPlaceType());
         holder.placeRatingView.setText(String.valueOf(placeItem.getPlaceRate()));
-        //Picasso.get().load(placeItem.getPlacePhoto()).into(holder.placePhotoView);
         Glide.with(context).load(placeItem.getPlacePhoto()).centerCrop().into(holder.placePhotoView);
+        holder.placeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(context, RestaurantDetailsActivity.class);
+                context.startActivity(detailIntent);
+            }
+        });
     }
 
     @Override
@@ -54,6 +63,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public LinearLayout placeLayout;
         public TextView placeTitleView;
         public TextView placeDistanceView;
         public TextView placeRatingView;
@@ -62,6 +72,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            placeLayout = itemView.findViewById(R.id.placeLayout);
             placeTitleView = itemView.findViewById(R.id.placeTitle);
             placeDistanceView = itemView.findViewById(R.id.placeDistance);
             placeRatingView = itemView.findViewById(R.id.placeRating);
